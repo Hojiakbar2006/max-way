@@ -1,4 +1,4 @@
-{% extends 'main/base.html' %} {% load static %} {% block content %}
+{% extends 'admin/base.html' %} {% load static %} {% block content %}
 <div class="container">
   <div class="title">
     <p>Overview</p>
@@ -6,7 +6,7 @@
   </div>
   <div class="overview">
     <div class="card">
-      <p class="title">Products</p>
+      <a href="/products/list" class="title">Products</a>
       <div class="count">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="card">
-      <p class="title">Orders</p>
+      <a href="/orders/list" class="title">Orders</a>
       <div class="count">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="card">
-      <p class="title">Users</p>
+      <a href="/users/list" class="title">Users</a>
       <div class="count">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@
       </div>
     </div>
     <div class="card">
-      <p class="title">Categories</p>
+      <a href="/categories/list" class="title">Categories</a>
       <div class="count">
         <svg
           xmlns="http://www.w3.org/2000/svg"

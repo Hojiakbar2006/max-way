@@ -11,21 +11,19 @@
     <meta name="author" content="Hau Nguyen" />
     <meta name="keywords" content="au theme template" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="{% static 'css/app.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/navbar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
 
-    <link rel="stylesheet" href="{% static 'css/dashboard/dashboard.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/dashboard/dashboard.css' %}" />
 
-    <link rel="stylesheet" href="{% static 'css/product/product.css' %}"/>
-
-
+    <link rel="stylesheet" href="{% static 'css/product/product.css' %}" />
   </head>
 
   <body>
-{% include 'main/navbar.html' %}
+    {% include 'admin/main/navbar.html' %}
 
     <div id="root">
-      {% include 'main/sidebar.html' %} {% block content %}{% endblock %}
+      {% include 'admin/main/sidebar.html' %} {% block content %}{% endblock %}
     </div>
   </body>
 </html>

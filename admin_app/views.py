@@ -20,12 +20,12 @@ def login_page(request):
             login(request, user)
             return redirect("dashboard")
 
-    return render(request, 'main/login.html')
+    return render(request, 'admin/login.html')
 
 
 @login_required_decorator
 def home_page(request):
-    return render(request, 'main/index.html')
+    return render(request, 'admin/main/index.html')
 
 
 @login_required_decorator
@@ -45,7 +45,7 @@ def main_dashboard(request):
         },
 
     }
-    return render(request, 'main/index.html', ctx)
+    return render(request, 'admin/main/index.html', ctx)
 
 
 @login_required_decorator
@@ -61,7 +61,7 @@ def product_list(request):
     ctx = {
         'products': products
     }
-    return render(request, "product/index.html", ctx)
+    return render(request, "admin/product/index.html", ctx)
 
 
 @login_required_decorator
@@ -71,7 +71,7 @@ def order_list(request):
     ctx = {
         'orders': orders
     }
-    return render(request, "order/index.html", ctx)
+    return render(request, "admin/order/index.html", ctx)
 
 
 @login_required_decorator
@@ -81,7 +81,7 @@ def users_list(request):
     ctx = {
         'users': users
     }
-    return render(request, "users/index.html", ctx)
+    return render(request, "admin/user/index.html", ctx)
 
 
 @login_required_decorator
@@ -91,7 +91,7 @@ def category_list(request):
     ctx = {
         'categories': categories
     }
-    return render(request, "category/index.html", ctx)
+    return render(request, "admin/category/index.html", ctx)
 
 
 # @login_required_decarator
