@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <div class="title">
+    <p>Product</p>
+    <a href="#">Add product</a>
+  </div>
+  <div class="list">
+    <div>
+          <table border="1px">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for product in products%}
+        <tr>
+          <th>{{product.id}}</th>
+          <th>
+            <img class="t_img" src="/media/{{ product.image }}" alt="product" />
+          </th>
+          <th>{{product.title}}</th>
+          <th>{{product.price}}</th>
+          <th>{{product.category}}</th>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <div class="title">
+    <p>Category</p>
+    <a href="#">Add category</a>
+  </div>
+  <div class="list">
+    <div>
+          <table border="1px">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Category</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for category in categories%}
+        <tr>
+          <th>{{category.id}}</th>
+          <th>{{category.category}}</th>
+          <th>{{category.created}}</th>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static%}
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="au theme template" />
+    <meta name="author" content="Hau Nguyen" />
+    <meta name="keywords" content="au theme template" />
+    <link rel="stylesheet" href="{% static 'css/login_page.css' %}" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <form id="login_form" method="post">
+      <h1>Login</h1>
+      {% csrf_token%}
+      <label>
+        <input
+          autocomplete="off"
+          autofocus="off"
+          class="au-input au-input--full"
+          type="username"
+          name="username"
+          placeholder="Username"
+        />
+      </label>
+      <label>
+        <input
+          autocomplete="off"
+          autofocus="off"
+          class="au-input au-input--full"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
+<!-- end document-->

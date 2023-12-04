@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <div class="title">
+    <p>Users</p>
+  </div>
+  <div class="list">
+    <div>
+          <table border="1px">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Phone number</th>
+          <th>Chat id</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for user in users%}
+        <tr>
+          <th>{{user.id}}</th>
+          <th>{{user.first_name}}</th>
+          <th>{{user.last_name}}</th>
+          <th>{{user.phone_number}}</th>
+          <th>{{user.chat_id}}</th>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
